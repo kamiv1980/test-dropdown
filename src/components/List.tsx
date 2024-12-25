@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import {OptionType} from "@/types/options";
 
-interface ListProps<T> {
+interface ListProps {
     items: OptionType[];
     itemHeight: number;
     height: number;
@@ -10,17 +10,16 @@ interface ListProps<T> {
     highlightedIndex: number;
 }
 
-export function List<T>({
+export function List({
            items,
            itemHeight,
            height,
            width,
            renderItem,
            highlightedIndex,
-       }: ListProps<T>) {
+       }: ListProps) {
     const [scrollTop, setScrollTop] = useState(0);
-//@ts-ignore
-    const outerRef = useRef<HTMLDivElement>(null);
+    const outerRef = useRef<HTMLDivElement | null>(null);
 
     useEffect(() => {
         const handleScroll = () => {

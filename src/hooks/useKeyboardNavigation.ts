@@ -5,10 +5,10 @@ interface UseKeyboardNavigationProps {
   isOpen: boolean;
   setIsOpen: (isOpen: boolean) => void;
   highlightedIndex: number;
-  setHighlightedIndex: (prevIndex: (prevIndex) => number) => void;
+  setHighlightedIndex: (prevIndex: (prevIndex: number) => number) => void;
   options: OptionType[];
   handleSelectOption: (option: OptionType) => void;
-  listRef: React.RefObject<HTMLDivElement>;
+  listRef: React.RefObject<HTMLDivElement | null>;
 }
 
 export const useKeyboardNavigation = ({

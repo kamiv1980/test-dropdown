@@ -13,10 +13,8 @@ export const Select: React.FC<SelectProps> = ({ options, onChange }) => {
     const [isOpen, setIsOpen] = useState(false);
     const [selectedOption, setSelectedOption] = useState<OptionType | null>(null);
     const [highlightedIndex, setHighlightedIndex] = useState<number>(-1);
-    //@ts-ignore
-    const selectRef = useRef<HTMLDivElement>(null);
-    //@ts-ignore
-    const listRef = useRef<HTMLDivElement>(null);
+    const selectRef = useRef<HTMLDivElement | null>(null);
+    const listRef = useRef<HTMLDivElement | null>(null);
 
     const handleSelectOption = (option: OptionType) => {
         setSelectedOption(option);

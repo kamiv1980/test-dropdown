@@ -28,7 +28,12 @@ const useDropdownData = (): UseDropdownDataReturn => {
                 }
 
                 const result = await response.json();
-                const formattedData = result.results.map((item: any) => ({
+                const formattedData = result.results.map((item: {
+                    objectId: string,
+                    Name: string,
+                    createdAt: string,
+                    updatedAt: string,
+                }) => ({
                     id: item.objectId,
                     name: item.Name
                 }));

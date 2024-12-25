@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/test-dropdown-nextjs.iml" filepath="$PROJECT_DIR$/.idea/test-dropdown-nextjs.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/next-dropdown.iml" filepath="$PROJECT_DIR$/.idea/next-dropdown.iml" />
     </modules>
   </component>
 </project>

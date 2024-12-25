@@ -1,10 +1,11 @@
 import { KeyboardEvent } from 'react';
+import {OptionType} from "@/types/options";
 
 interface UseKeyboardNavigationProps {
   isOpen: boolean;
   setIsOpen: (isOpen: boolean) => void;
   highlightedIndex: number;
-  setHighlightedIndex: (index: (prevIndex) => any) => void;
+  setHighlightedIndex: (prevIndex: (prevIndex) => number) => void;
   options: OptionType[];
   handleSelectOption: (option: OptionType) => void;
   listRef: React.RefObject<HTMLDivElement>;
@@ -27,8 +28,7 @@ export const useKeyboardNavigation = ({
           setIsOpen(true);
         } else {
           setHighlightedIndex((prevIndex) =>
-              prevIndex < options.length - 1 ? prevIndex + 1 : prevIndex
-          );
+              prevIndex < options.length - 1 ? prevIndex + 1 : prevIndex);
         }
         break;
       case 'ArrowUp':

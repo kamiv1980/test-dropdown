@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import {OptionType} from "@/types/options";
 
 interface UseDropdownDataReturn {
     data: OptionType[];
@@ -23,11 +24,11 @@ const useDropdownData = (): UseDropdownDataReturn => {
                 const response = await fetch(API_URL, {headers: HEADERS});
 
                 if (!response.ok) {
-                    throw new Error(`Error: ${response.status}`);
+                    console.log(`Error: ${response.status}`);
                 }
 
                 const result = await response.json();
-                const formattedData = result.results.map((item: any, index: number) => ({
+                const formattedData = result.results.map((item: any) => ({
                     id: item.objectId,
                     name: item.Name
                 }));

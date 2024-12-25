@@ -1,4 +1,4 @@
-type OptionType = {
+export type OptionType = {
     id: string | number,
     name: string
 }

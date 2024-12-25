@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
+import {OptionType} from "@/types/options";
 
 interface ListProps<T> {
     items: OptionType[];

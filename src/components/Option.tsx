@@ -1,4 +1,5 @@
 import React from 'react';
+import {OptionType} from "@/types/options";
 
 interface OptionProps {
     option: OptionType;

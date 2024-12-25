@@ -2,6 +2,7 @@ import React, { useState, useRef, useEffect } from 'react';
 import { Option } from './Option';
 import { useKeyboardNavigation } from '@/hooks/useKeyboardNavigation';
 import {List} from "@/components/List";
+import {OptionType} from "@/types/options";
 
 interface SelectProps {
     options: OptionType[];
